@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<title>金价</title>
+<meta name="description" content="沪金T+D 与 XAU/USD 实时金价小组件" />
+
+<!-- PWA manifest -->
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#f2f2f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)" />
+
+<!-- iOS: add to home screen support -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="金价" />
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+
+<!-- Icons -->
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="app">
+  <div class="card" id="card">
+    <div class="row" id="row-hu">
+      <span class="label">沪金T+D</span>
+      <div class="value-wrap">
+        <span class="price">--</span>
+        <span class="pct"></span>
+        <svg class="spark" width="40" height="16" viewBox="0 0 40 16"></svg>
+      </div>
+    </div>
+    <div class="sep"></div>
+    <div class="row" id="row-xau">
+      <span class="label">XAU/USD</span>
+      <div class="value-wrap">
+        <span class="price">--</span>
+        <span class="pct"></span>
+        <svg class="spark" width="40" height="16" viewBox="0 0 40 16"></svg>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="time" id="time">…</span>
+      <div class="pill" id="mode-toggle">
+        <button class="pill-btn active" data-mode="intraday">分时</button>
+        <button class="pill-btn" data-mode="daily">日K</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
